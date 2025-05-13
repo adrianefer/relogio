@@ -45,14 +45,23 @@
     <script>
 
 document.addEventListener("DOMContentLoaded", function() {
+    console.log("JavaScript está funcionando");
+
     const startDate = new Date("2025-03-02");
+    console.log("Data de início configurada:", startDate);
 
     function updateCounter() {
         const currentDate = new Date();
+        console.log("Data atual:", currentDate);
+
         const difference = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24));
         console.log("Dias de diferença:", difference);
+
         document.getElementById("counter").innerText = difference;
     }
+    updateCounter();
+});
+
     updateCounter();
 });
 
